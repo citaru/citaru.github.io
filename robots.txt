@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://citaru.eu.org/sitemap.xml
+Sitemap: https://citaru.github.io/citaru-site/sitemap.xml
