@@ -2,7 +2,7 @@
     {
         "path": "404.html",
         "type": "file",
-        "md5": "3e99e7c41e69cc6000f3edca352e0692"
+        "md5": "3e14523c3689087ac70dcff8ea2937db"
     },
     {
         "path": "assets",
@@ -107,7 +107,47 @@
     {
         "path": "index.html",
         "type": "file",
-        "md5": "0cb95cd7a1540faa1c1cabc4c5c83d47"
+        "md5": "3fa53b9f641e02a29f4709b0a42338ec"
+    },
+    {
+        "path": "media",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "media/website",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/media/website/favicon-16x16.png",
+        "type": "file",
+        "md5": "a46a946c7d1358881b027cab52af28c1"
+    },
+    {
+        "path": "media/website/responsive",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/media/website/responsive/favicon-16x16-lg.png",
+        "type": "file",
+        "md5": "0995644e554405f8e7d7c3a4ddb3a3a7"
+    },
+    {
+        "path": "/media/website/responsive/favicon-16x16-md.png",
+        "type": "file",
+        "md5": "0995644e554405f8e7d7c3a4ddb3a3a7"
+    },
+    {
+        "path": "/media/website/responsive/favicon-16x16-sm.png",
+        "type": "file",
+        "md5": "0995644e554405f8e7d7c3a4ddb3a3a7"
+    },
+    {
+        "path": "/media/website/responsive/favicon-16x16-xs.png",
+        "type": "file",
+        "md5": "0995644e554405f8e7d7c3a4ddb3a3a7"
     },
     {
         "path": "robots.txt",
@@ -132,6 +172,6 @@
     {
         "path": "/tags/index.html",
         "type": "file",
-        "md5": "356dad3c4ed9b7271ffca40c9cd02a61"
+        "md5": "5964526f689c94cfcd57db2131549b2a"
     }
 ]
