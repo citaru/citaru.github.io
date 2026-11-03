@@ -3,7 +3,7 @@
                 }</style></noscript><div id="matrix-loader"><canvas id="matrix-canvas"></canvas></div><script>(function() {
     window.addEventListener('DOMContentLoaded', () => {
         
-        // === 1. PLOAIA MATRIX DE ÎNCEPUT ===
+        // === MATRIX Effect ===
         const canvas = document.getElementById('matrix-canvas');
         if (canvas) {
             const ctx = canvas.getContext('2d');
@@ -62,7 +62,7 @@
             }, 40);
         }
 
-        // === 2. FUNCȚIA GENERALĂ PENTRU GENERAT CIFRE (MOUSE & TOUCH) ===
+        // === (MOUSE & TOUCH) ===
         let lastMove = 0;
 
         function createBinaryParticle(x, y) {
@@ -90,12 +90,12 @@
             }, 850);
         }
 
-        // Ascultă mișcarea de MOUSE (pentru PC)
+        //  MOUSE PC
         window.addEventListener('mousemove', (e) => {
             createBinaryParticle(e.clientX, e.clientY);
         });
 
-        // Ascultă mișcarea de DEGET (pentru Telefoane / Tablete)
+        // Slide Phone
         window.addEventListener('touchmove', (e) => {
             // Luăm coordonatele primului deget care atinge ecranul
             if (e.touches && e.touches.length > 0) {

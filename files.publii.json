@@ -2,7 +2,7 @@
     {
         "path": "404.html",
         "type": "file",
-        "md5": "3e14523c3689087ac70dcff8ea2937db"
+        "md5": "ff32d7717e1ad07778f9a75f38702ffb"
     },
     {
         "path": "assets",
@@ -107,7 +107,7 @@
     {
         "path": "index.html",
         "type": "file",
-        "md5": "0855a101a77f4cfde27886ae5170f132"
+        "md5": "fc7bbe537aed9b1279444d45a0123403"
     },
     {
         "path": "media",
@@ -172,6 +172,6 @@
     {
         "path": "/tags/index.html",
         "type": "file",
-        "md5": "5964526f689c94cfcd57db2131549b2a"
+        "md5": "bb40dce90b8e2ed95a66591003337b80"
     }
 ]
