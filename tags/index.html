@@ -1,6 +1,110 @@
-<!DOCTYPE html><html lang="en-gb"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>All tags - citaru</title><meta name="robots" content="noindex, follow"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="alternate" type="application/atom+xml" href="https://citaru.github.io/feed.xml" title="citaru - RSS"><link rel="alternate" type="application/json" href="https://citaru.github.io/feed.json" title="citaru - JSON"><meta property="og:title" content="citaru"><meta property="og:site_name" content="citaru"><meta property="og:description" content=""><meta property="og:url" content="https://citaru.github.io/tags/"><meta property="og:type" content="website"><link rel="preload" href="https://citaru.github.io/assets/dynamic/fonts/andadapro/andadapro.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://citaru.github.io/assets/dynamic/fonts/andadapro/andadapro-italic.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="https://citaru.github.io/assets/css/style.css?v&#x3D;78ae6deaac0d3280a4d92b8610c66bad"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"citaru","url":"https://citaru.github.io/"}</script><noscript><style>img[loading] {
+<!DOCTYPE html><html lang="en-gb"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>All tags - citaru</title><meta name="robots" content="noindex, follow"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="alternate" type="application/atom+xml" href="https://citaru.github.io/feed.xml" title="citaru - RSS"><link rel="alternate" type="application/json" href="https://citaru.github.io/feed.json" title="citaru - JSON"><meta property="og:title" content="citaru"><meta property="og:site_name" content="citaru"><meta property="og:description" content=""><meta property="og:url" content="https://citaru.github.io/tags/"><meta property="og:type" content="website"><link rel="preload" href="https://citaru.github.io/assets/dynamic/fonts/andadapro/andadapro.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://citaru.github.io/assets/dynamic/fonts/andadapro/andadapro-italic.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="https://citaru.github.io/assets/css/style.css?v&#x3D;ca4f75b2d93e26813f11c97c280a89a5"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"citaru","url":"https://citaru.github.io/"}</script><noscript><style>img[loading] {
                     opacity: 1;
-                }</style></noscript></head><body class="tags-template"><div class="container container--center"><header class="header"><div class="header__logo"><a class="logo" href="https://citaru.github.io/">citaru</a></div></header><main class="content page page--tags"><div class="content page"><div class="page__header"><h1 class="h2 page__title">Collection of all tags</h1></div><ul class="list"></ul></div></main><footer class="footer"><div class="footer__inner"><div class="footer__copyright"><p>© 2026 Powered by citaru</p></div></div></footer></div><script defer="defer" src="https://citaru.github.io/assets/js/scripts.min.js?v&#x3D;c2232aa7558e9517946129d2a1b8c770"></script><script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script><script>var images = document.querySelectorAll('img[loading]');
+                }</style></noscript><div id="matrix-loader"><canvas id="matrix-canvas"></canvas></div><script>(function() {
+    window.addEventListener('DOMContentLoaded', () => {
+        
+        // === 1. PLOAIA MATRIX DE ÎNCEPUT ===
+        const canvas = document.getElementById('matrix-canvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+            const fontSize = 16;
+            const columns = Math.floor(canvas.width / fontSize) + 1;
+            const rainDrops = Array(columns).fill(1);
+            
+            function drawMatrix() {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#0F0';
+                ctx.font = fontSize + 'px monospace';
+                for (let i = 0; i < rainDrops.length; i++) {
+                    const text = chars[Math.floor(Math.random() * chars.length)];
+                    ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+                    if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                        rainDrops[i] = 0;
+                    }
+                    rainDrops[i]++;
+                }
+            }
+
+            let matrixInterval = setInterval(drawMatrix, 30);
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+
+            setTimeout(() => {
+                clearInterval(matrixInterval);
+                document.body.classList.add('site-loaded');
+                const targets = document.querySelectorAll('.matrix-decode');
+                targets.forEach(el => scrambleText(el));
+            }, 2000);
+        }
+
+        function scrambleText(element) {
+            if (!element) return;
+            const finalText = element.innerText; 
+            const randomChars = "$%&*()_+[]{}?";
+            let count = 0;
+            let textInterval = setInterval(() => {
+                element.innerText = finalText.split("").map((char, index) => {
+                    if (index < count) return finalText[index];
+                    return randomChars[Math.floor(Math.random() * randomChars.length)];
+                }).join("");
+                if (count >= finalText.length) {
+                    clearInterval(textInterval);
+                    element.classList.add('decoded');
+                }
+                count += 1;
+            }, 40);
+        }
+
+        // === 2. FUNCȚIA GENERALĂ PENTRU GENERAT CIFRE (MOUSE & TOUCH) ===
+        let lastMove = 0;
+
+        function createBinaryParticle(x, y) {
+            const now = Date.now();
+            if (now - lastMove < 40) return; // Limită de timp ca să nu blocheze telefonul
+            lastMove = now;
+
+            const particle = document.createElement('span');
+            particle.className = 'matrix-mouse-particle';
+            particle.innerText = Math.random() > 0.5 ? '1' : '0';
+            particle.style.left = x + 'px';
+            particle.style.top = y + 'px';
+            
+            document.body.appendChild(particle);
+
+            setTimeout(() => {
+                const randomX = (Math.random() - 0.5) * 20;
+                const randomY = Math.random() * 50 + 20; // Cad în jos
+                particle.style.transform = `translate(${randomX}px, ${randomY}px)`;
+                particle.style.opacity = '0';
+            }, 50);
+
+            setTimeout(() => {
+                particle.remove();
+            }, 850);
+        }
+
+        // Ascultă mișcarea de MOUSE (pentru PC)
+        window.addEventListener('mousemove', (e) => {
+            createBinaryParticle(e.clientX, e.clientY);
+        });
+
+        // Ascultă mișcarea de DEGET (pentru Telefoane / Tablete)
+        window.addEventListener('touchmove', (e) => {
+            // Luăm coordonatele primului deget care atinge ecranul
+            if (e.touches && e.touches.length > 0) {
+                createBinaryParticle(e.touches[0].clientX, e.touches[0].clientY);
+            }
+        }, { passive: true }); // Optimizare pentru performanță pe mobil
+        
+    });
+})();</script></head><body class="tags-template"><div class="container container--center"><header class="header"><div class="header__logo"><a class="logo" href="https://citaru.github.io/">citaru</a></div></header><main class="content page page--tags"><div class="content page"><div class="page__header"><h1 class="h2 page__title">Collection of all tags</h1></div><ul class="list"></ul></div></main><footer class="footer"><div class="footer__inner"><div class="footer__copyright"><p>© 2026 Powered by citaru</p></div></div></footer></div><script defer="defer" src="https://citaru.github.io/assets/js/scripts.min.js?v&#x3D;c2232aa7558e9517946129d2a1b8c770"></script><script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script><script>var images = document.querySelectorAll('img[loading]');
         for (var i = 0; i < images.length; i++) {
             if (images[i].complete) {
                 images[i].classList.add('is-loaded');
