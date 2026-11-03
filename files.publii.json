@@ -1,0 +1,137 @@
+[
+    {
+        "path": "404.html",
+        "type": "file",
+        "md5": "edb3b1ab4fa45627ac93b69eba06f71e"
+    },
+    {
+        "path": "assets",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "assets/css",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/assets/css/editor.css",
+        "type": "file",
+        "md5": "e5909a88ba1158a79ba2dbf82d6b2d86"
+    },
+    {
+        "path": "/assets/css/main.css",
+        "type": "file",
+        "md5": "56480d0eafb59e6b58d53231b877b1e3"
+    },
+    {
+        "path": "/assets/css/style.css",
+        "type": "file",
+        "md5": "78ae6deaac0d3280a4d92b8610c66bad"
+    },
+    {
+        "path": "assets/dynamic",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "assets/dynamic/fonts",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "assets/dynamic/fonts/andadapro",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/assets/dynamic/fonts/andadapro/andadapro-italic.woff2",
+        "type": "file",
+        "md5": "72538294889c763c70144725b443a86f"
+    },
+    {
+        "path": "/assets/dynamic/fonts/andadapro/andadapro.woff2",
+        "type": "file",
+        "md5": "643a28a799b5e641979303853f7803a6"
+    },
+    {
+        "path": "assets/js",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/assets/js/scripts.js",
+        "type": "file",
+        "md5": "51db36ac9bfaaa60d4fb7a583c143c99"
+    },
+    {
+        "path": "/assets/js/scripts.min.js",
+        "type": "file",
+        "md5": "c2232aa7558e9517946129d2a1b8c770"
+    },
+    {
+        "path": "/assets/js/svg-fix.js",
+        "type": "file",
+        "md5": "7c0d2bb7276904b382e80bf2d85e8a96"
+    },
+    {
+        "path": "/assets/js/svg-map.js",
+        "type": "file",
+        "md5": "12d66f2b2cce51311dd05cef039befb6"
+    },
+    {
+        "path": "assets/svg",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/assets/svg/svg-map.svg",
+        "type": "file",
+        "md5": "d167697bcc673e5b8139fbdc5b9f5240"
+    },
+    {
+        "path": "authors",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "feed.json",
+        "type": "file",
+        "md5": "9bbd0f095473d5349af03e041a35dbee"
+    },
+    {
+        "path": "feed.xml",
+        "type": "file",
+        "md5": "e17cb3981d792acb1107e067e85ad1f5"
+    },
+    {
+        "path": "index.html",
+        "type": "file",
+        "md5": "fec527d16b4403a01988a261f1b8c62a"
+    },
+    {
+        "path": "robots.txt",
+        "type": "file",
+        "md5": "11f7c5b4d2c7d6302763615bf3a7700c"
+    },
+    {
+        "path": "sitemap.xml",
+        "type": "file",
+        "md5": "6af6c71507faeb841bb0b57c795e3f2b"
+    },
+    {
+        "path": "sitemap.xsl",
+        "type": "file",
+        "md5": "03c2f9a7fdcc46ff05c435907614a0b8"
+    },
+    {
+        "path": "tags",
+        "type": "directory",
+        "md5": false
+    },
+    {
+        "path": "/tags/index.html",
+        "type": "file",
+        "md5": "7de5cb5150774132ad26c53813bef3e0"
+    }
+]
