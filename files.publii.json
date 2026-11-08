@@ -2,7 +2,7 @@
     {
         "path": "404.html",
         "type": "file",
-        "md5": "10b35fa6b9d2be2178b829dce3afc867"
+        "md5": "87ba8c026496bb7b71102061c299c271"
     },
     {
         "path": "assets",
@@ -27,7 +27,7 @@
     {
         "path": "/assets/css/style.css",
         "type": "file",
-        "md5": "5315ff7476b02b4b04d89cc04fc6da72"
+        "md5": "6aeb4aa2d49a573522753aaa50010e64"
     },
     {
         "path": "assets/dynamic",
@@ -107,7 +107,7 @@
     {
         "path": "index.html",
         "type": "file",
-        "md5": "7bcb1ddfe3865fc6f1d566acd5f409fc"
+        "md5": "0063e9c73cfb8e9834d301e93efd84e4"
     },
     {
         "path": "media",
@@ -172,6 +172,6 @@
     {
         "path": "/tags/index.html",
         "type": "file",
-        "md5": "5afc1b38553ce6aef7856e8eb0f51410"
+        "md5": "5518dbd0692c8be5a32d6ebddcfd232d"
     }
 ]
